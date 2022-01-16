@@ -104,6 +104,8 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
+include_directories(${OpenCV_INCLUDE_DIRS})
+
 ## Declare a cpp library
 # add_library(trajectory_referee_456
 #   src/${PROJECT_NAME}/trajectory_referee_456.cpp
