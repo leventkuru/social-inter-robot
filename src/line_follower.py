@@ -10,25 +10,7 @@
 
 import rospy, cv2, cv_bridge, numpy
 from sensor_msgs.msg import Image
-from geometry_msgs.msg import Point
 from geometry_msgs.msg import Twist
-from tf.transformations import euler_from_quaternion
-from math import atan2
-
-x = 0.0
-y = 0.0
-theta = 0.0
-
-def newOdom (msg):
-    global x
-    global y
-    global theta
-
-    x = msg.pose.pose.position.x
-    y = msg.pose.pose.position.y
-
-    rot_q = msg.pose.pose.orientation
-    (roll, pitch, theta) = euler_from_quaternion([rot_q.x, rot_q.y. rot_z, rot_w])
 
 class Follower:
 
